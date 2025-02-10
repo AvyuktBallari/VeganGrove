@@ -15,7 +15,7 @@ const Footer = () => {
                 />
                 <h4 className="ml-2 text-lg text-[#cfcfcf] font-semibold">VeganGrove</h4>
               </div>
-              <div className="text-sm text-gray-400">Copyright © 2025</div>
+              <div className="text-sm text-gray-400">Copyright © 2026</div>
               <div className="text-xs text-gray-400 mt-2">All rights reserved</div>
             </div>
   
