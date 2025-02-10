@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import About from './About';
 
 const App = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -41,6 +42,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />} />
+            <Route path="/process" element={<About />} />
           </Routes>
         </BrowserRouter>
       </div>

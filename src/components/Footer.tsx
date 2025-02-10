@@ -5,7 +5,6 @@ const Footer = () => {
       <div className="relative font-cute">
         <div className="px-8 pt-20 pb-32 relative bg-[#06402B]">
           <div className="max-w-7xl mx-auto flex sm:flex-row flex-col justify-between items-start">
-            {/* Logo Section */}
             <div className="flex flex-col items-start mb-4">
               <div className="flex items-center mb-4">
                 <img
@@ -19,7 +18,6 @@ const Footer = () => {
               <div className="text-xs text-gray-400 mt-2">All rights reserved</div>
             </div>
   
-            {/* Additional Links Section */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 items-start mt-10 md:mt-0">
               <div className="flex flex-col space-y-4">
                 <h5 className="text-sm font-semibold text-gray-300">Quick Links</h5>
@@ -28,7 +26,6 @@ const Footer = () => {
                 <a className="text-xs sm:text-sm text-gray-400 hover:text-gray-500 transition-colors" href="/contact">Contact</a>
               </div>
   
-              {/* Contact Info Section */}
               <div className="flex flex-col space-y-4">
                 <h5 className="text-sm font-semibold text-gray-300">Contact</h5>
                 <p className="text-xs sm:text-sm text-gray-400">6030 Southard Trce Cumming GA 30040</p>
@@ -36,7 +33,6 @@ const Footer = () => {
                 <p className="text-xs sm:text-sm text-gray-400">Email: hr@vegangrove.com</p>
               </div>
   
-              {/* Newsletter Section */}
               <div className="flex flex-col space-y-4">
                 <h5 className="text-sm font-semibold text-gray-300">Newsletter(soon)</h5>
                 <p className="text-xs sm:text-sm text-gray-400">Sign up for our newsletter to get the latest updates:</p>

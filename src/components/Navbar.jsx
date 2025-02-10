@@ -11,10 +11,9 @@ export default function Navbar() {
       <nav className="relative flex items-center justify-between px-6 py-4 max-w-7xl mx-auto gap-4">
         <div className="inline-flex items-center space-x-2">
           <img src={logo} alt="VeganGrove" className="w-9 h-9 rounded-2xl" />
-          <div className="text-xl font-bold text-[#06402B] shrink-0">VeganGrove</div>
+          <a href="/" className="text-xl font-bold text-[#06402B] shrink-0">VeganGrove</a>
         </div>
         
-        {/* Centered Search Bar */}
         <div className="flex-1 max-w-2xl mx-8">
           <input 
             type="text" 
@@ -23,11 +22,10 @@ export default function Navbar() {
           />
         </div>
         
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 shrink-0">
           <div className="flex items-center gap-6">
             <a href="/" className="text-gray-700 hover:text-[#06402B] transition-colors">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-[#06402B] transition-colors">About</a>
+            <a href="/process" className="text-gray-700 hover:text-[#06402B] transition-colors">Process</a>
             <a href="/menu" className="text-gray-700 hover:text-[#06402B] transition-colors">Menu</a>
             <a href="/order" className="text-gray-700 hover:text-[#06402B] transition-colors">Order</a>
             <a href="/blog" className="text-gray-700 hover:text-[#06402B] transition-colors">Blog</a>
@@ -40,7 +38,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-600 hover:text-gray-800 transition-colors"
@@ -60,12 +57,11 @@ export default function Navbar() {
           </svg>
         </button>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50">
             <div className="px-4 py-3 space-y-2">
               <a href="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Home</a>
-              <a href="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">About</a>
+              <a href="/process" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Process</a>
               <a href="/menu" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu</a>
               <a href="/order" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Order</a>
               <a href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Blog</a>
