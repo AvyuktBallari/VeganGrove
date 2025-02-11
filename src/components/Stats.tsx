@@ -1,3 +1,6 @@
+import farmer from '../assets/farmer.jpg'
+import customer from '../assets/customer.png'
+
 interface StatsCardProps {
     title: string;
     description: string;
@@ -26,13 +29,13 @@ interface StatsCardProps {
       {
         title: "50+",
         description: "Trusted farmers across the state",
-        imageSrc: "https://i.pinimg.com/736x/37/a3/26/37a3265d61e73b55dee0b027eab3b91a.jpg",
+        imageSrc: farmer,
         rotation: "md:rotate-1"
       },
       {
         title: "98%",
         description: "of customers said they would be coming back",
-        imageSrc: "https://www.pngplay.com/wp-content/uploads/7/Customer-Transparent-Image.png",
+        imageSrc: customer,
         rotation: "md:-rotate-1"
       }
     ];
