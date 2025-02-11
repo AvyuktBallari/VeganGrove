@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Home from './Home';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import About from './About';
+import Menu from './Menu';
 
 const App = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -43,6 +44,7 @@ const App = () => {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/process" element={<About />} />
+            <Route path="/menu" element={<Menu />} />
           </Routes>
         </BrowserRouter>
       </div>

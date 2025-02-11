@@ -19,19 +19,19 @@ function About() {
       </div>
 
       <div className="max-w-[78rem] mx-auto">
-        <div className="p-6 sm:p-8 md:p-10 bg-[#06402B] text-white rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
-          <div className="flex flex-col gap-y-3 font-fig justify-center text-white">
-            <div className="p-2 rounded-md bg-white text-[black] w-max">
+        <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
+          <div className="flex flex-col gap-y-3 font-fig justify-center text-black">
+            <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
                 <span className="font-bold text-xl">Step 1</span>
             </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-white font-semibold">
+            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
               Farm-Fresh Ingredients
               <span className="block opacity-70">Sourced from Local Partners</span>
             </h1>
-            <p className="text-lg tracking-wide w-full text-left">
+            <p className="text-lg tracking-wide w-full text-left text-black">
               We partner with local farms that practice sustainable agriculture, ensuring only the freshest seasonal produce and ethically-raised meats reach our kitchen.
             </p>
-            <div className="flex flex-col gap-y-2 tracking-wide text-white">
+            <div className="flex flex-col gap-y-2 tracking-wide text-black">
               <div className="flex items-center gap-x-8">
                 <div className="flex items-center gap-x-2">
                   <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
@@ -61,22 +61,22 @@ function About() {
           </div>
         </div>
 
-        <div className="p-6 sm:p-8 md:p-10 bg-[#06402B] text-white rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
+        <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
           <div className="rounded-lg overflow-hidden">
             <img alt="Artisanal Kitchen" src="https://rotom.co.uk/media/mageplaza/blog/post/import/blog/uk/2020/08/take-care-of-your-crops-learn-about-containers-carts-and-other-farming-solutions/take-care-of-your-crops-learn-about-containers-carts-and-other-farming-solutions-2.jpg" className="w-full h-auto" />
           </div>
           <div className="flex flex-col gap-y-3 font-fig justify-center text-white">
-            <div className="p-2 rounded-md bg-white text-[black] w-max">
+            <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
                 <span className="font-bold text-xl">Step 2</span>
             </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-white font-semibold">
+            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
               Artisanal Preparation
               <span className="block opacity-70">Crafted with Care</span>
             </h1>
-            <p className="text-lg tracking-wide w-full text-left">
+            <p className="text-lg tracking-wide w-full text-left text-black">
               Our master chefs combine traditional techniques with modern innovation. Every dish is prepared fresh daily, never frozen, with no artificial additives.
             </p>
-            <div className="flex flex-col gap-y-2 tracking-wide text-white">
+            <div className="flex flex-col gap-y-2 tracking-wide text-black">
               <div className="flex items-center gap-x-8">
                 <div className="flex items-center gap-x-2">
                   <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
@@ -103,19 +103,19 @@ function About() {
           </div>
         </div>
 
-        <div className="p-6 sm:p-8 md:p-10 bg-[#06402B] text-white rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
-          <div className="flex flex-col gap-y-3 font-fig justify-center text-white">
-            <div className="p-2 rounded-md bg-white text-black w-max">
+        <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
+          <div className="flex flex-col gap-y-3 font-fig justify-center text-black">
+            <div className="p-2 rounded-md bg-[#06402B] text-white w-max">
                 <span className="font-bold text-xl">Step 3</span>
             </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-white font-semibold">
+            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
               Efficient Distribution
               <span className="block opacity-70">Maintaining Peak Freshness</span>
             </h1>
-            <p className="text-lg tracking-wide w-full text-left">
+            <p className="text-lg tracking-wide w-full text-left text-black">
               Our temperature-controlled logistics network ensures ingredients and prepared dishes maintain optimal freshness from our kitchen to your table.
             </p>
-            <div className="flex flex-col gap-y-2 tracking-wide text-white">
+            <div className="flex flex-col gap-y-2 tracking-wide text-black">
               <div className="flex items-center gap-x-8">
                 <div className="flex items-center gap-x-2">
                   <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
@@ -151,6 +151,7 @@ function About() {
           </div>
         </div>
         </div>
+
         <Testimonials11 />
         <FAQ />
         <Footer />
