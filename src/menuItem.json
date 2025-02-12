@@ -1,0 +1,109 @@
+{
+    "vegan-lentil-soup": {
+      "name": "Vegan Lentil Soup",
+      "description": "A hearty and nutritious soup made with lentils, tomatoes, and a blend of spices. Perfect for a cozy meal.",
+      "ingredients": [
+        "1 cup lentils",
+        "1 can diced tomatoes",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "4 cups vegetable broth",
+        "1 tsp cumin",
+        "1 tsp turmeric",
+        "Salt and pepper to taste"
+      ],
+      "image": "https://jessicainthekitchen.com/wp-content/uploads/2022/01/Lentil-Soup-10.jpg"
+    },
+    "grilled-eggplant-with-tahini": {
+      "name": "Grilled Eggplant with Tahini",
+      "description": "Smoky grilled eggplant drizzled with creamy tahini sauce. A delicious Mediterranean-inspired dish.",
+      "ingredients": [
+        "1 large eggplant",
+        "2 tbsp olive oil",
+        "2 tbsp tahini",
+        "1 tbsp lemon juice",
+        "1 clove garlic, minced",
+        "Salt to taste"
+      ],
+      "image": "https://www.seriouseats.com/thmb/pgpCtCB3ddxSy8R-dx34Kt3rdNU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__03__20160410-roasted-eggplant-lentil-vegan-5-3bad9a90f7124917994e78b273ccc932.jpg"
+    },
+    "chickpea-and-spinach-stew": {
+      "name": "Chickpea and Spinach Stew",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "stuffed-bell-peppers-with-quinoa": {
+      "name": "Stuffed Bell Peppers with Quinoa",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "mushroom-risotto": {
+      "name": "Mushroom Risotto",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "vegan-pad-thai": {
+      "name": "Vegan Pad Thai",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "roasted-cauliflower-steak": {
+      "name": "Roasted Cauliflower Steak",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "falafel-with-hummus-and-pita": {
+      "name": "Falafel with Hummus and Pita",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "sweet-potato-and-black-bean-tacos": {
+      "name": "Sweet Potato and Black Bean Tacos",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "zucchini-noodles-with-pesto": {
+      "name": "Zucchini Noodles with Pesto",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "vegan-sushi-rolls": {
+      "name": "Vegan Sushi Rolls",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "jackfruit-bbq-sandwich": {
+      "name": "Jackfruit BBQ Sandwich",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "coconut-curry-with-tofu": {
+      "name": "Coconut Curry with Tofu",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "mediterranean-mezze-platter": {
+      "name": "Mediterranean Mezze Platter",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    },
+    "vegan-chocolate-avocado-mousse": {
+      "name": "Vegan Chocolate Avocado Mousse",
+      "description": "Placeholder description.",
+      "ingredients": ["Placeholder ingredients."],
+      "image": "Placeholder image URL."
+    }
+  }
+  
