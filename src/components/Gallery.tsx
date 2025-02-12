@@ -16,7 +16,7 @@ const Gallery: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:items-end gap-y-4 justify-between">
                     <div className="flex flex-col gap-y-4">
                         <h4 className="tracking-widest text-main text-black">GALLERY</h4>
-                        <h1 className="font-medium text-black text-5xl lg:text-6xl">Some of our <br /> Incredible Recipes</h1>
+                        <h1 className="font-medium text-black text-5xl lg:text-6xl">Some of our <br /> past meals</h1>
                     </div>
                     <a href='/order' className="text-white bg-[#06402B] px-6 py-2 rounded-full tracking-widest w-max shadow-md h-max">
                         ORDER NOW
