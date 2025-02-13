@@ -1,27 +1,86 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from '../assets/icon.svg'
+import logo from "../assets/icon.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mood, setMood] = useState("");
+  const [loading, setLoading] = useState(false); // Added loading state
   const navigate = useNavigate();
+
+  const handleKeyDown = async (event) => {
+    if (event.key === "Enter" && mood.trim() !== "") {
+      setLoading(true); // Show loader when request starts
+      try {
+        const response = await fetch(
+          `https://webmaster.zayaan.adiavi.com/search/${encodeURIComponent(mood)}`
+        );
+
+        if (!response.ok) throw new Error("Failed to fetch data");
+
+        const data = await response.json();
+        console.log("Response:", data);
+
+        const formattedMenuItem = data.menu_item
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[^\w-]/g, "");
+
+        navigate(`/menu/${formattedMenuItem}`, { state: { reason: data.reason } });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false); // Hide loader after request finishes
+      }
+    }
+  };
 
   return (
     <div className="bg-[#f1f5f9] font-cute">
       <nav className="relative flex items-center justify-between px-6 py-4 max-w-7xl mx-auto gap-4">
         <div className="inline-flex items-center space-x-2">
           <img src={logo} alt="VeganGrove" className="w-9 h-9 rounded-2xl" />
-          <a href="/" className="text-xl font-bold text-[#06402B] shrink-0">VeganGrove</a>
+          <a href="/" className="text-xl font-bold text-[#06402B] shrink-0">
+            VeganGrove
+          </a>
         </div>
-        
-        <div className="flex-1 max-w-2xl mx-8">
-          <input 
-            type="text" 
+
+        <div className="flex-1 max-w-2xl mx-8 relative">
+          <input
+            type="text"
             placeholder="Feeling hungry? Type in your current mood..."
-            className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2  placeholder-gray-500 text-gray-700"
+            value={mood}
+            onChange={(e) => setMood(e.target.value)}
+            onKeyDown={handleKeyDown}
+            className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 placeholder-gray-500 text-gray-700"
           />
+          {loading && (
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+              <svg
+                className="animate-spin w-6 h-6 text-[#06402B]"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0"
+                ></path>
+              </svg>
+            </div>
+          )}
         </div>
-        
+
         <div className="hidden md:flex items-center gap-6 shrink-0">
           <div className="flex items-center gap-6">
             <a href="/" className="text-gray-700 hover:text-[#06402B] transition-colors">Home</a>
@@ -38,7 +97,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-600 hover:text-gray-800 transition-colors"
         >

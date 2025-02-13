@@ -22,7 +22,6 @@ function Solution() {
             </a>
           </div>
 
-          {/* Image Section */}
           <div className="lg:w-1/2">
             <img
               src="https://images.squarespace-cdn.com/content/v1/5d96d524052c897425394aaf/7f17f583-0ec1-40a5-9ebf-2bb221ae5e1c/what-does-farm-to-table-mean.jpg"

@@ -9,7 +9,7 @@ function Menu() {
     {
       name: "Vegan Lentil Soup",
       description: "Hearty and warming, made with fresh vegetables and aromatic spices",
-      image: "https://simple-veganista.com/wp-content/uploads/2019/10/vegan-lentil-soup-recipe-5.jpg", // Add your image URLs here
+      image: "https://simple-veganista.com/wp-content/uploads/2019/10/vegan-lentil-soup-recipe-5.jpg",
       link: "/menu/vegan-lentil-soup"
     },
     {

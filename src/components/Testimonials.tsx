@@ -1,6 +1,5 @@
 import React from "react";
 
-// Define the type for StaticImageData (if you're not using Next.js, you can remove this)
 type StaticImageData = {
   src: string;
   height: number;
@@ -8,8 +7,6 @@ type StaticImageData = {
   blurDataURL?: string;
 };
 
-// Use this object to add an icon to the testimonial (optional) like the Product Hunt logo for instance.
-// Only change the values if you add more referring sites (currently Twitter & Product Hunt)
 const refTypes = {
   productHunt: {
     id: "product_hunt",
@@ -47,7 +44,6 @@ const refTypes = {
   other: { id: "other", ariaLabel: null, svg: null },
 } as const;
 
-// Define the type for a testimonial
 type TestimonialType = {
   username?: string;
   name: string;
@@ -57,7 +53,6 @@ type TestimonialType = {
   img?: string | StaticImageData;
 };
 
-// The list of your testimonials. It needs 11 items to fill the grid. The last one (11th) is featured on large devices (span 2 columns + big font)
 const list: TestimonialType[] = [
     {
       username: "plantlover92",
@@ -136,12 +131,10 @@ const list: TestimonialType[] = [
 
   
 
-// Props for the Testimonial component
 interface TestimonialProps {
   i: number;
 }
 
-// A single testimonial, to be rendered in a list
 const Testimonial: React.FC<TestimonialProps> = ({ i }) => {
   const testimonial = list[i];
 
@@ -198,7 +191,6 @@ const Testimonial: React.FC<TestimonialProps> = ({ i }) => {
   );
 };
 
-// The main Testimonials11 component
 const Testimonials11: React.FC = () => {
   return (
     <section className="mt-20 font-cute" id="testimonials">
@@ -228,7 +220,6 @@ const Testimonials11: React.FC = () => {
           </li>
 
           <li className="hidden font-inter text-white md:grid order-none md:order-first lg:order-none col-span-2 grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {/* BIG FEATURED TESTIMONIAL — THE LAST ONE IN THE LIST (11th) */}
             {list.length > 0 && (
               <ul className="col-span-2">
                 <li>
