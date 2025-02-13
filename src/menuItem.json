@@ -47,7 +47,7 @@
     },
     "stuffed-bell-peppers-with-quinoa": {
       "name": "Stuffed Bell Peppers with Quinoa",
-      "description": "Placeholder description.",
+      "description": "Colorful bell peppers stuffed with a savory mix of quinoa, black beans, and veggies. A healthy and satisfying dish.",
     "ingredients": [
       "4 large bell peppers (any color), tops cut off and seeds removed",
       "1 cup cooked quinoa",
@@ -68,13 +68,13 @@
     },
     "mushroom-risotto": {
       "name": "Mushroom Risotto",
-      "description": "Placeholder description.",
+      "description": "Creamy and indulgent risotto made with mushrooms, Arborio rice, and a touch of nutritional yeast. Comfort food at its best.",
       "ingredients": ["Placeholder ingredients."],
       "image": "https://www.recipetineats.com/tachyon/2019/10/Mushroom-Risotto_7.jpg"
     },
     "vegan-pad-thai": {
       "name": "Vegan Pad Thai",
-      "description": "Placeholder description.",
+      "description": "A tangy and savory stir-fry with rice noodles, tofu, and fresh veggies. Topped with peanuts and lime for a burst of flavor.",
       "ingredients": [
       "200g rice noodles",
       "1 cup firm tofu, cubed",
@@ -95,7 +95,7 @@
     },
     "roasted-cauliflower-steak": {
       "name": "Roasted Cauliflower Steak",
-      "description": "Placeholder description.",
+      "description": "Thick slices of cauliflower roasted to perfection with smoky spices. A hearty and elegant plant-based main course.",
       "ingredients": [
         "1 large head cauliflower, cut into 1-inch thick steaks",
         "3 tbsp olive oil",
@@ -110,7 +110,7 @@
     },
     "falafel-with-hummus-and-pita": {
       "name": "Falafel with Hummus and Pita",
-      "description": "Placeholder description.",
+      "description": "Crispy falafel served with creamy hummus and warm pita bread. A classic Middle Eastern favorite.",
       "ingredients": [
         "1 cup dried chickpeas, soaked overnight",
         "1 small onion, chopped",
@@ -128,7 +128,7 @@
     },
     "sweet-potato-and-black-bean-tacos": {
       "name": "Sweet Potato and Black Bean Tacos",
-      "description": "Placeholder description.",
+      "description": "Soft tortillas filled with spiced sweet potatoes, black beans, and fresh toppings. A vibrant and tasty meal.",
       "ingredients": [
         "2 medium sweet potatoes, peeled and diced",
         "1 can black beans, drained and rinsed",
@@ -144,7 +144,7 @@
     },
     "zucchini-noodles-with-pesto": {
       "name": "Zucchini Noodles with Pesto",
-      "description": "Placeholder description.",
+      "description": "Light and refreshing zucchini noodles tossed in a vibrant basil pesto. A low-carb, nutrient-packed dish.",
       "ingredients": [
         "3 medium zucchinis, spiralized into noodles",
         "1 cup fresh basil leaves",
@@ -159,7 +159,7 @@
     },
     "chickpea-and-spinach-stew": {
       "name": "Vegan Sushi Rolls",
-      "description": "Placeholder description.",
+      "description": "A comforting stew featuring chickpeas, spinach, and aromatic spices. Rich, wholesome, and full of flavor.",
       "ingredients": [
         "2 cups cooked chickpeas (or 1 can, drained and rinsed)",
         "2 cups fresh spinach (or frozen spinach, thawed)",
@@ -178,7 +178,7 @@
     },
     "jackfruit-bbq-sandwich": {
       "name": "Jackfruit BBQ Sandwich",
-      "description": "Placeholder description.",
+      "description": "Pulled jackfruit cooked in smoky BBQ sauce and served on a bun. A delicious vegan twist on a classic sandwich.",
       "ingredients": [
         "1 can young green jackfruit (in water or brine, drained and shredded)",
         "1/2 cup BBQ sauce",
@@ -194,7 +194,7 @@
     },
     "coconut-curry-with-tofu": {
       "name": "Coconut Curry with Tofu",
-      "description": "Placeholder description.",
+      "description": "A creamy and aromatic curry made with coconut milk, tofu, and veggies. Perfect with rice or naan.",
       "ingredients": [
         "1 block firm tofu, pressed and cubed",
         "1 can coconut milk",
@@ -215,7 +215,7 @@
     },
     "mediterranean-mezze-platter": {
       "name": "Mediterranean Mezze Platter",
-      "description": "Placeholder description.",
+      "description": "A vibrant spread of hummus, baba ganoush, falafel, and more. Ideal for sharing or a light meal.",
       "ingredients": [
         "1 cup hummus",
         "1 cup baba ganoush (roasted eggplant dip)",
@@ -231,7 +231,7 @@
     },
     "vegan-chocolate-avocado-mousse": {
       "name": "Vegan Chocolate Avocado Mousse",
-      "description": "Placeholder description.",
+      "description": "A rich and creamy dessert made with avocado, cocoa, and maple syrup. Decadent and guilt-free",
       "ingredients": [
         "2 ripe avocados",
         "1/4 cup cocoa powder",
