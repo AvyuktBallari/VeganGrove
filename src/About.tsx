@@ -12,7 +12,7 @@ function About() {
           The Process
         </h1>
 
-        <p className="mt-5 mb-5 max-w-xl mx-auto text-lg">
+        <p className="mt-5 mb-5 max-w-md mx-auto text-lg">
           From farm to table - discover our <strong><em>commitment</em></strong> to quality.
           Every step carefully crafted for your dining experience.
         </p>
