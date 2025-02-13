@@ -106,6 +106,7 @@ const menuItems: MenuItem[] = [
   }
 ];
 
+
 const OrderForm: React.FC = () => {
   const [orderItems, setOrderItems] = useState<OrderItems>({})
   const [pickupTime, setPickupTime] = useState<string>("")
@@ -123,6 +124,7 @@ const OrderForm: React.FC = () => {
     expirationDate: "",
     cvv: "",
   })
+  const [showConfirmation, setShowConfirmation] = useState(false)
 
   const updateQuantity = (id: number, value: number): void => {
     setOrderItems((prev) => ({
@@ -155,213 +157,239 @@ const OrderForm: React.FC = () => {
       toGoOption,
       billingInfo,
     })
+    setShowConfirmation(true)
   }
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-cute">
-      <h1 className="text-3xl font-bold">Place Your Order</h1>
-      <p className="text-lg mb-8">Scroll all the way down for your order details.</p>
-      <form onSubmit={handleSubmit} className="space-y-8">
-        <div className="space-y-4">
-          {menuItems.map((item) => (
-            <div key={item.id} className="flex items-center justify-between py-4 border-b border-gray-200">
+      {showConfirmation ? (
+        <div className="text-center justify-center items-center space-y-4">
+          <h1 className="text-3xl font-bold">Order Received! 🎉</h1>
+          <div className="text-lg space-y-2">
+            <p>Thank you for your order!</p>
+            <p>We've sent a confirmation to <strong>{billingInfo.email}</strong>.</p>
+            <p>Please check your inbox (including spam folder) for:</p>
+            <ul className="list-disc list-inside text-left max-w-xs mx-auto">
+              <li>Order summary</li>
+              <li>Pickup/delivery details</li>
+              <li>Estimated preparation time</li>
+            </ul>
+            <div className="pt-4">
+              <p className="font-semibold">Total Amount: ${calculateTotal().toFixed(2)}</p>
+              <p className="text-sm text-gray-600 mt-2">
+                Note: This is a demo interface. No actual payment or email was processed.
+              </p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <>
+          <h1 className="text-3xl font-bold">Place Your Order</h1>
+          <p className="text-lg mb-8">Scroll all the way down for your order details.</p>
+          <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Menu Items Section */}
+            <div className="space-y-4">
+              {menuItems.map((item) => (
+                <div key={item.id} className="flex items-center justify-between py-4 border-b border-gray-200">
+                  <div>
+                    <h3 className="text-lg font-medium">{item.name}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                    <p className="mt-1 text-sm font-medium">${item.price.toFixed(2)}</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <button
+                      type="button"
+                      onClick={() => updateQuantity(item.id, (orderItems[item.id] || 0) - 1)}
+                      className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      min="0"
+                      value={orderItems[item.id] || 0}
+                      onChange={(e) => updateQuantity(item.id, Number.parseInt(e.target.value) || 0)}
+                      className="w-12 text-center border-gray-300 rounded-md"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => updateQuantity(item.id, (orderItems[item.id] || 0) + 1)}
+                      className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Order Details Section */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Order Details</h2>
               <div>
-                <h3 className="text-lg font-medium">{item.name}</h3>
-                <p className="text-sm text-gray-500">{item.description}</p>
-                <p className="mt-1 text-sm font-medium">${item.price.toFixed(2)}</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <button
-                  type="button"
-                  onClick={() => updateQuantity(item.id, (orderItems[item.id] || 0) - 1)}
-                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full"
-                >
-                  -
-                </button>
+                <label htmlFor="pickupTime" className="block text-sm font-medium text-gray-700">
+                  Pickup Time *
+                </label>
                 <input
-                  type="number"
-                  min="0"
-                  value={orderItems[item.id] || 0}
-                  onChange={(e) => updateQuantity(item.id, Number.parseInt(e.target.value) || 0)}
-                  className="w-12 text-center border-gray-300 rounded-md"
+                  type="time"
+                  id="pickupTime"
+                  required
+                  value={pickupTime}
+                  onChange={(e) => setPickupTime(e.target.value)}
+                  className="mt-1 block w-full border-gray-300 rounded-md"
                 />
+              </div>
+              <div>
+                <label htmlFor="specialInstructions" className="block text-sm font-medium text-gray-700">
+                  Special Instructions
+                </label>
+                <textarea
+                  id="specialInstructions"
+                  rows={3}
+                  value={specialInstructions}
+                  onChange={(e) => setSpecialInstructions(e.target.value)}
+                  className="mt-1 block w-full border p-2 focus:ring-0 border-gray-300! rounded-md"
+                  placeholder="Any special requests or allergies?"
+                />
+              </div>
+            </div>
+
+            {/* Dining Option */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Dining Option</h2>
+              <div className="flex space-x-4">
                 <button
                   type="button"
-                  onClick={() => updateQuantity(item.id, (orderItems[item.id] || 0) + 1)}
-                  className="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-full"
+                  className={`px-4 py-2 rounded-md ${diningOption === "dine-in" ? "bg-black text-white" : "border border-gray-300"}`}
+                  onClick={() => setDiningOption("dine-in")}
                 >
-                  +
+                  Dine In
+                </button>
+                <button
+                  type="button"
+                  className={`px-4 py-2 rounded-md ${diningOption === "to-go" ? "bg-black text-white" : "border border-gray-300"}`}
+                  onClick={() => setDiningOption("to-go")}
+                >
+                  To Go
                 </button>
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Order Details</h2>
-          <div>
-            <label htmlFor="pickupTime" className="block text-sm font-medium text-gray-700">
-              Pickup Time *
-            </label>
-            <input
-              type="time"
-              id="pickupTime"
-              required
-              value={pickupTime}
-              onChange={(e) => setPickupTime(e.target.value)}
-              className="mt-1 block w-full border-gray-300 rounded-md"
-            />
-          </div>
-          <div>
-            <label htmlFor="specialInstructions" className="block text-sm font-medium text-gray-700">
-              Special Instructions
-            </label>
-            <textarea
-              id="specialInstructions"
-              rows={3}
-              value={specialInstructions}
-              onChange={(e) => setSpecialInstructions(e.target.value)}
-              className="mt-1 block w-full border p-2 focus:ring-0 border-gray-300! rounded-md"
-              placeholder="Any special requests or allergies?"
-            />
-          </div>
-        </div>
+            {/* To-Go Options */}
+            {diningOption === "to-go" && (
+              <div className="space-y-4">
+                <h2 className="text-lg font-semibold">Would you like delivery or pickup?</h2>
+                <div className="flex space-x-4">
+                  <button
+                    type="button"
+                    className={`px-4 py-2 rounded-md ${toGoOption === "delivery" ? "bg-black text-white" : "border border-gray-300"}`}
+                    onClick={() => setToGoOption("delivery")}
+                  >
+                    Delivery
+                  </button>
+                  <button
+                    type="button"
+                    className={`px-4 py-2 rounded-md ${toGoOption === "pickup" ? "bg-black text-white" : "border border-gray-300"}`}
+                    onClick={() => setToGoOption("pickup")}
+                  >
+                    Pickup
+                  </button>
+                </div>
+              </div>
+            )}
 
-        {/* Dining Option */}
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Dining Option</h2>
-          <div className="flex space-x-4">
-            <button
-              type="button"
-              className={`px-4 py-2 rounded-md ${diningOption === "dine-in" ? "bg-black text-white" : "border border-gray-300"}`}
-              onClick={() => setDiningOption("dine-in")}
-            >
-              Dine In
-            </button>
-            <button
-              type="button"
-              className={`px-4 py-2 rounded-md ${diningOption === "to-go" ? "bg-black text-white" : "border border-gray-300"}`}
-              onClick={() => setDiningOption("to-go")}
-            >
-              To Go
-            </button>
-          </div>
-        </div>
+            {/* Billing Information */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Billing Information</h2>
+              {["name", "email", "phone", "address", "city", "zip"].map((field) => (
+                <input
+                  key={field}
+                  type="text"
+                  name={field}
+                  placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+                  value={billingInfo[field as keyof typeof billingInfo]}
+                  onChange={handleBillingChange}
+                  className="block w-full border p-2 rounded-md"
+                  required
+                />
+              ))}
+            </div>
 
-        {/* To-Go Options */}
-        {diningOption === "to-go" && (
-          <div className="space-y-4">
-            <h2 className="text-lg font-semibold">Would you like delivery or pickup?</h2>
-            <div className="flex space-x-4">
+            {/* Credit Card Information */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold">Credit Card Information</h2>
+              <div className="space-y-2">
+                <label htmlFor="creditCardNumber" className="block text-sm font-medium text-gray-700">
+                  Card Number
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    id="creditCardNumber"
+                    name="creditCardNumber"
+                    placeholder="1234 5678 9012 3456"
+                    value={billingInfo.creditCardNumber}
+                    onChange={handleBillingChange}
+                    className="block w-full border p-2 rounded-md pl-10"
+                    required
+                    maxLength={19}
+                  />
+                  <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                </div>
+              </div>
+              <div className="flex space-x-4">
+                <div className="flex-1 space-y-2">
+                  <label htmlFor="expirationDate" className="block text-sm font-medium text-gray-700">
+                    Expiration Date
+                  </label>
+                  <input
+                    type="text"
+                    id="expirationDate"
+                    name="expirationDate"
+                    placeholder="MM/YY"
+                    value={billingInfo.expirationDate}
+                    onChange={handleBillingChange}
+                    className="block w-full border p-2 rounded-md"
+                    required
+                    maxLength={5}
+                  />
+                </div>
+                <div className="flex-1 space-y-2">
+                  <label htmlFor="cvv" className="block text-sm font-medium text-gray-700">
+                    CVV
+                  </label>
+                  <input
+                    type="text"
+                    id="cvv"
+                    name="cvv"
+                    placeholder="123"
+                    value={billingInfo.cvv}
+                    onChange={handleBillingChange}
+                    className="block w-full border p-2 rounded-md"
+                    required
+                    maxLength={4}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-gray-200">
+              <div className="flex items-center justify-between text-lg font-semibold mb-4">
+                <span>Total Amount:</span>
+                <span>${calculateTotal().toFixed(2)}</span>
+              </div>
               <button
-                type="button"
-                className={`px-4 py-2 rounded-md ${toGoOption === "delivery" ? "bg-black text-white" : "border border-gray-300"}`}
-                onClick={() => setToGoOption("delivery")}
+                type="submit"
+                className="w-full bg-black text-white py-3 px-4 rounded-md hover:bg-gray-800 transition-colors duration-200"
               >
-                Delivery
-              </button>
-              <button
-                type="button"
-                className={`px-4 py-2 rounded-md ${toGoOption === "pickup" ? "bg-black text-white" : "border border-gray-300"}`}
-                onClick={() => setToGoOption("pickup")}
-              >
-                Pickup
+                Complete Order
               </button>
             </div>
-          </div>
-        )}
-
-        {/* Billing Information */}
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Billing Information</h2>
-          {["name", "email", "phone", "address", "city", "zip"].map((field) => (
-            <input
-              key={field}
-              type="text"
-              name={field}
-              placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
-              value={billingInfo[field as keyof typeof billingInfo]}
-              onChange={handleBillingChange}
-              className="block w-full border p-2 rounded-md"
-              required
-            />
-          ))}
-        </div>
-
-        {/* Credit Card Information */}
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Credit Card Information</h2>
-          <div className="space-y-2">
-            <label htmlFor="creditCardNumber" className="block text-sm font-medium text-gray-700">
-              Card Number
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                id="creditCardNumber"
-                name="creditCardNumber"
-                placeholder="1234 5678 9012 3456"
-                value={billingInfo.creditCardNumber}
-                onChange={handleBillingChange}
-                className="block w-full border p-2 rounded-md pl-10"
-                required
-                maxLength={19}
-              />
-              <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-            </div>
-          </div>
-          <div className="flex space-x-4">
-            <div className="flex-1 space-y-2">
-              <label htmlFor="expirationDate" className="block text-sm font-medium text-gray-700">
-                Expiration Date
-              </label>
-              <input
-                type="text"
-                id="expirationDate"
-                name="expirationDate"
-                placeholder="MM/YY"
-                value={billingInfo.expirationDate}
-                onChange={handleBillingChange}
-                className="block w-full border p-2 rounded-md"
-                required
-                maxLength={5}
-              />
-            </div>
-            <div className="flex-1 space-y-2">
-              <label htmlFor="cvv" className="block text-sm font-medium text-gray-700">
-                CVV
-              </label>
-              <input
-                type="text"
-                id="cvv"
-                name="cvv"
-                placeholder="123"
-                value={billingInfo.cvv}
-                onChange={handleBillingChange}
-                className="block w-full border p-2 rounded-md"
-                required
-                maxLength={4}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="pt-4 border-t border-gray-200">
-          <div className="flex items-center justify-between text-lg font-semibold mb-4">
-            <span>Total Amount:</span>
-            <span>${calculateTotal().toFixed(2)}</span>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-black text-white py-3 px-4 rounded-md hover:bg-gray-800 transition-colors duration-200"
-          >
-            Complete Order
-          </button>
-        </div>
-      </form>
+          </form>
+        </>
+      )}
     </div>
   )
 }
 
 export default OrderForm
-

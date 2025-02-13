@@ -96,16 +96,15 @@ export default function Navbar() {
           
         </div>
 
-        {/* Cart Icon */}
         <div className="md:flex items-center gap-6 shrink-0">
-          <button className="relative">
+          <a href="/order" className="relative">
             <FaShoppingCart className="w-6 h-6 text-gray-700 hover:text-[#06402B]" />
             {cart.length > 0 && (
               <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                 {cart.length}
               </span>
             )}
-          </button>
+          </a>
         </div>
 
         <button
@@ -139,7 +138,7 @@ export default function Navbar() {
                 href="/contact"
                 className="block px-4 py-3 mt-4 text-sm font-medium text-center text-white bg-[#06402B] rounded-lg hover:bg-[#043020] transition-colors"
               >
-                Book a Demo
+                Book a Order
               </a>
             </div>
           </div>
