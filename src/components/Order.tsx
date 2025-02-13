@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import type React from "react"
+import { useState } from "react"
+import { CreditCard } from "lucide-react"
 
 interface MenuItem {
   id: number
@@ -104,35 +106,61 @@ const menuItems: MenuItem[] = [
   }
 ];
 
-
 const OrderForm: React.FC = () => {
   const [orderItems, setOrderItems] = useState<OrderItems>({})
-  const [pickupTime, setPickupTime] = useState<string>('')
-  const [specialInstructions, setSpecialInstructions] = useState<string>('')
+  const [pickupTime, setPickupTime] = useState<string>("")
+  const [specialInstructions, setSpecialInstructions] = useState<string>("")
+  const [diningOption, setDiningOption] = useState<string>("")
+  const [toGoOption, setToGoOption] = useState<string>("")
+  const [billingInfo, setBillingInfo] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    zip: "",
+    creditCardNumber: "",
+    expirationDate: "",
+    cvv: "",
+  })
 
   const updateQuantity = (id: number, value: number): void => {
-    setOrderItems(prev => ({
+    setOrderItems((prev) => ({
       ...prev,
-      [id]: Math.max(0, value)
+      [id]: Math.max(0, value),
     }))
   }
 
   const calculateTotal = (): number => {
     return Object.entries(orderItems).reduce((total, [id, quantity]) => {
-      const item = menuItems.find(item => item.id === Number(id))
+      const item = menuItems.find((item) => item.id === Number(id))
       return total + (item?.price || 0) * quantity
     }, 0)
   }
 
+  const handleBillingChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setBillingInfo({
+      ...billingInfo,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
-    console.log('Order submitted:', { orderItems, pickupTime, specialInstructions })
+    console.log("Order submitted:", {
+      orderItems,
+      pickupTime,
+      specialInstructions,
+      diningOption,
+      toGoOption,
+      billingInfo,
+    })
   }
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-cute">
       <h1 className="text-3xl font-bold">Place Your Order</h1>
-      <p className='text-lg mb-8'>scroll all the way down for your order details</p>
+      <p className="text-lg mb-8">Scroll all the way down for your order details.</p>
       <form onSubmit={handleSubmit} className="space-y-8">
         <div className="space-y-4">
           {menuItems.map((item) => (
@@ -154,7 +182,7 @@ const OrderForm: React.FC = () => {
                   type="number"
                   min="0"
                   value={orderItems[item.id] || 0}
-                  onChange={(e) => updateQuantity(item.id, parseInt(e.target.value) || 0)}
+                  onChange={(e) => updateQuantity(item.id, Number.parseInt(e.target.value) || 0)}
                   className="w-12 text-center border-gray-300 rounded-md"
                 />
                 <button
@@ -193,9 +221,128 @@ const OrderForm: React.FC = () => {
               rows={3}
               value={specialInstructions}
               onChange={(e) => setSpecialInstructions(e.target.value)}
-              className="mt-1 block w-full border p-2  focus:ring-0 border-gray-300! rounded-md"
+              className="mt-1 block w-full border p-2 focus:ring-0 border-gray-300! rounded-md"
               placeholder="Any special requests or allergies?"
             />
+          </div>
+        </div>
+
+        {/* Dining Option */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold">Dining Option</h2>
+          <div className="flex space-x-4">
+            <button
+              type="button"
+              className={`px-4 py-2 rounded-md ${diningOption === "dine-in" ? "bg-black text-white" : "border border-gray-300"}`}
+              onClick={() => setDiningOption("dine-in")}
+            >
+              Dine In
+            </button>
+            <button
+              type="button"
+              className={`px-4 py-2 rounded-md ${diningOption === "to-go" ? "bg-black text-white" : "border border-gray-300"}`}
+              onClick={() => setDiningOption("to-go")}
+            >
+              To Go
+            </button>
+          </div>
+        </div>
+
+        {/* To-Go Options */}
+        {diningOption === "to-go" && (
+          <div className="space-y-4">
+            <h2 className="text-lg font-semibold">Would you like delivery or pickup?</h2>
+            <div className="flex space-x-4">
+              <button
+                type="button"
+                className={`px-4 py-2 rounded-md ${toGoOption === "delivery" ? "bg-black text-white" : "border border-gray-300"}`}
+                onClick={() => setToGoOption("delivery")}
+              >
+                Delivery
+              </button>
+              <button
+                type="button"
+                className={`px-4 py-2 rounded-md ${toGoOption === "pickup" ? "bg-black text-white" : "border border-gray-300"}`}
+                onClick={() => setToGoOption("pickup")}
+              >
+                Pickup
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Billing Information */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold">Billing Information</h2>
+          {["name", "email", "phone", "address", "city", "zip"].map((field) => (
+            <input
+              key={field}
+              type="text"
+              name={field}
+              placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+              value={billingInfo[field as keyof typeof billingInfo]}
+              onChange={handleBillingChange}
+              className="block w-full border p-2 rounded-md"
+              required
+            />
+          ))}
+        </div>
+
+        {/* Credit Card Information */}
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold">Credit Card Information</h2>
+          <div className="space-y-2">
+            <label htmlFor="creditCardNumber" className="block text-sm font-medium text-gray-700">
+              Card Number
+            </label>
+            <div className="relative">
+              <input
+                type="text"
+                id="creditCardNumber"
+                name="creditCardNumber"
+                placeholder="1234 5678 9012 3456"
+                value={billingInfo.creditCardNumber}
+                onChange={handleBillingChange}
+                className="block w-full border p-2 rounded-md pl-10"
+                required
+                maxLength={19}
+              />
+              <CreditCard className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+            </div>
+          </div>
+          <div className="flex space-x-4">
+            <div className="flex-1 space-y-2">
+              <label htmlFor="expirationDate" className="block text-sm font-medium text-gray-700">
+                Expiration Date
+              </label>
+              <input
+                type="text"
+                id="expirationDate"
+                name="expirationDate"
+                placeholder="MM/YY"
+                value={billingInfo.expirationDate}
+                onChange={handleBillingChange}
+                className="block w-full border p-2 rounded-md"
+                required
+                maxLength={5}
+              />
+            </div>
+            <div className="flex-1 space-y-2">
+              <label htmlFor="cvv" className="block text-sm font-medium text-gray-700">
+                CVV
+              </label>
+              <input
+                type="text"
+                id="cvv"
+                name="cvv"
+                placeholder="123"
+                value={billingInfo.cvv}
+                onChange={handleBillingChange}
+                className="block w-full border p-2 rounded-md"
+                required
+                maxLength={4}
+              />
+            </div>
           </div>
         </div>
 
@@ -217,3 +364,4 @@ const OrderForm: React.FC = () => {
 }
 
 export default OrderForm
+
