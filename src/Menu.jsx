@@ -46,7 +46,7 @@ function Menu() {
       name: "Roasted Cauliflower Steak",
       description: "Tender cauliflower with herbs and spices",
       image: "https://www.crowdedkitchen.com/wp-content/uploads/2020/09/roasted-cauliflower-steaks-15.jpg",
-      link: "roasted-cauliflower-steak"
+      link: "/menu/roasted-cauliflower-steak"
     },
     {
       name: "Falafel with Hummus and Pita",
