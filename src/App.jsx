@@ -5,6 +5,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import About from './About';
 import Menu from './Menu';
 import MenuItem from './MenuItem'; // Import the new component
+import OrderPage from './OrderPage';
 
 const App = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -45,7 +46,8 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/process" element={<About />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/menu/:menu_item" element={<MenuItem />} /> {/* New dynamic route */}
+            <Route path="/order" element={<OrderPage />} />
+            <Route path="/menu/:menu_item" element={<MenuItem />} /> 
           </Routes>
         </BrowserRouter>
       </div>
