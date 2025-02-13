@@ -57,11 +57,12 @@ function FeaturedMeals() {
           
           {/* Order Now Button positioned relative to grid container */}
           <div className="relative lg:absolute lg:right-0 lg:-top-15">
-            <button 
+            <a
+              href="/order" 
               className="bg-[#006400] text-white py-2 px-6 rounded-full hover:bg-[#004d00] transition duration-300 shadow-lg"
             >
               Order Now
-            </button>
+            </a>
           </div>
         </div>
       </div>
