@@ -100,7 +100,8 @@ function Menu() {
 
   return (
     <div className="font-cute mx-auto">
-      <Navbar />
+        <Navbar />
+      
 
       <div className="text-center mx-auto mt-20 max-w-4xl">
         <h1 className="lg:text-7xl text-3xl font-bold leading-tight">

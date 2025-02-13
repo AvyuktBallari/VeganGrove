@@ -15,6 +15,7 @@ function MenuItem() {
     return (
       <div>
         <Navbar />
+        
         <div className="flex flex-col items-center justify-center min-h-screen">
           <div className="!max-w-7xl flex flex-col items-center justify-center !text-center lg:text-left">
             <div className="text-black font-cute">

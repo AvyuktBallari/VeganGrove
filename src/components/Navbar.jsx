@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/icon.svg";
+import { FaShoppingCart } from "react-icons/fa"; // Add this for the cart icon
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [mood, setMood] = useState("");
-  const [loading, setLoading] = useState(false); // Added loading state
+  const [loading, setLoading] = useState(false);
+  const [cart, setCart] = useState([]); // Cart state to track added items
   const navigate = useNavigate();
 
   const handleKeyDown = async (event) => {
     if (event.key === "Enter" && mood.trim() !== "") {
-      setLoading(true); // Show loader when request starts
+      setLoading(true);
       try {
         const response = await fetch(
           `https://webmaster.zayaan.adiavi.com/search/${encodeURIComponent(mood)}`
@@ -19,8 +21,6 @@ export default function Navbar() {
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const data = await response.json();
-        console.log("Response:", data);
-
         const formattedMenuItem = data.menu_item
           .toLowerCase()
           .replace(/\s+/g, "-")
@@ -30,9 +30,13 @@ export default function Navbar() {
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setLoading(false); // Hide loader after request finishes
+        setLoading(false);
       }
     }
+  };
+
+  const addToCart = (item) => {
+    setCart((prevCart) => [...prevCart, item]); // Adds the item to the cart
   };
 
   return (
@@ -87,14 +91,21 @@ export default function Navbar() {
             <a href="/process" className="text-gray-700 hover:text-[#06402B] transition-colors">Process</a>
             <a href="/menu" className="text-gray-700 hover:text-[#06402B] transition-colors">Menu</a>
             <a href="/order" className="text-gray-700 hover:text-[#06402B] transition-colors">Order</a>
-            <a href="/blog" className="text-gray-700 hover:text-[#06402B] transition-colors">Blog</a>
+            <a href="/farmers" className="text-gray-700 hover:text-[#06402B] transition-colors">Farmers</a>
           </div>
-          <a
-            href="/contact"
-            className="ml-4 px-4 py-2 text-sm font-medium text-white bg-[#06402B] rounded-lg hover:bg-[#043020] transition-colors"
-          >
-            Book a Demo
-          </a>
+          
+        </div>
+
+        {/* Cart Icon */}
+        <div className="md:flex items-center gap-6 shrink-0">
+          <button className="relative">
+            <FaShoppingCart className="w-6 h-6 text-gray-700 hover:text-[#06402B]" />
+            {cart.length > 0 && (
+              <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {cart.length}
+              </span>
+            )}
+          </button>
         </div>
 
         <button
@@ -123,7 +134,7 @@ export default function Navbar() {
               <a href="/process" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Process</a>
               <a href="/menu" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu</a>
               <a href="/order" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Order</a>
-              <a href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Blog</a>
+              <a href="/farmers" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Farmers</a>
               <a
                 href="/contact"
                 className="block px-4 py-3 mt-4 text-sm font-medium text-center text-white bg-[#06402B] rounded-lg hover:bg-[#043020] transition-colors"
