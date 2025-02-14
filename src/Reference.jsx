@@ -1,6 +1,7 @@
 import { div } from "framer-motion/client"
 import { ExternalLink } from "lucide-react"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer";
 
 function ReferencePage() {
   const references = [
@@ -59,6 +60,8 @@ function ReferencePage() {
         </div>
       </div>
     </div>
+
+    <Footer />
     </div>
   );
 }
