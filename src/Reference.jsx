@@ -1,6 +1,8 @@
 import { div } from "framer-motion/client"
 import { ExternalLink } from "lucide-react"
 import Navbar from "./components/Navbar"
+import copyright from './assets/copyright.pdf'
+import worklog from './assets/worklog.pdf' 
 import Footer from "./components/Footer";
 
 function ReferencePage() {
@@ -38,6 +40,12 @@ function ReferencePage() {
         <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-cute">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-cute font-[500] text-[#06402B] text-center mb-8">References & Credits</h1>
+
+        <div className="mx-auto flex justify-center space-x-4 mb-8">
+        <a className="px-4 py-2 rounded-md bg-black text-white border border-gray-300" download="worklog.pdf" href={worklog}>Worklog</a>
+        <a className="px-4 py-2 rounded-md bg-black text-white border border-gray-300" download="copyright.pdf" href={copyright}>Copyright</a>
+        </div>
+
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
           <ul className="divide-y divide-gray-200">
             {references.map((ref, index) => (

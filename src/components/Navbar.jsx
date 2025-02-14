@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/icon.svg";
+import logo from "../assets/favicon.svg";
 import { FaShoppingCart } from "react-icons/fa"; // Add this for the cart icon
 
 export default function Navbar() {
