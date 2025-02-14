@@ -5,7 +5,7 @@ function Hero() {
     <div>
       <div className="relative  mt-10 flex flex-col justify-center items-center text-center">
       <div className="max-w-4xl mx-auto font-cute">
-        <h1 className="lg:text-8xl text-4xl text-center max-w-4xl font-[500] leading-tighter">
+        <h1 className="lg:text-8xl text-4xl text-center max-w-sm lg:max-w-4xl font-[500] leading-tighter">
             Say goodbye to inorganic foods.
         </h1>
         <p className="mt-5 mb-5 text-lg">
