@@ -7,6 +7,7 @@ import Menu from './Menu';
 import MenuItem from './MenuItem'; // Import the new component
 import OrderPage from './OrderPage';
 import Farmers from './Farmers';
+import ReferencePage from './Reference';
 
 const App = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -49,7 +50,8 @@ const App = () => {
             <Route path="/menu" element={<Menu />} />
             <Route path="/order" element={<OrderPage />} />
             <Route path="/farmers" element={<Farmers />} />
-            <Route path="/menu/:menu_item" element={<MenuItem />} /> 
+            <Route path="/menu/:menu_item" element={<MenuItem />} />
+            <Route path="/credits" element={<ReferencePage />} />  
           </Routes>
         </BrowserRouter>
       </div>

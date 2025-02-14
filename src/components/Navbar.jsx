@@ -36,7 +36,7 @@ export default function Navbar() {
   };
 
   const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]); // Adds the item to the cart
+    setCart((prevCart) => [...prevCart, item]);
   };
 
   return (
@@ -92,6 +92,8 @@ export default function Navbar() {
             <a href="/menu" className="text-gray-700 hover:text-[#06402B] transition-colors">Menu</a>
             <a href="/order" className="text-gray-700 hover:text-[#06402B] transition-colors">Order</a>
             <a href="/farmers" className="text-gray-700 hover:text-[#06402B] transition-colors">Farmers</a>
+            <a href="/credits" className="text-gray-700 hover:text-[#06402B] transition-colors">Reference</a>
+
           </div>
           
         </div>
@@ -134,6 +136,8 @@ export default function Navbar() {
               <a href="/menu" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Menu</a>
               <a href="/order" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Order</a>
               <a href="/farmers" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Farmers</a>
+              <a href="/credits" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Reference</a>
+
               <a
                 href="/contact"
                 className="block px-4 py-3 mt-4 text-sm font-medium text-center text-white bg-[#06402B] rounded-lg hover:bg-[#043020] transition-colors"
