@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Testimonials11 from "./components/Testimonials";
 import FAQ from "./components/FAQ";
+import { ShoppingCart } from "lucide-react";
 
 function MenuItem() {
   const { menu_item } = useParams();
@@ -13,26 +14,20 @@ function MenuItem() {
 
   if (!item) {
     return (
-      <div>
+      <div className="min-h-screen bg-white">
         <Navbar />
-        
-        <div className="flex flex-col items-center justify-center min-h-screen">
-          <div className="!max-w-7xl flex flex-col items-center justify-center !text-center lg:text-left">
-            <div className="text-black font-cute">
-              <span className="font-cute border p-2 rounded-xl mb-5 inline-block">
-                MENU ITEM NOT FOUND
-              </span>
-              <h2 className="text-3xl mt-5 font-bold mb-6">Item Not Found</h2>
-              <p className="mb-6 max-w-xl mx-auto lg:mx-0">
-                Sorry, the menu item you're looking for does not exist.
-              </p>
-              <a
-                href="/menu"
-                className="mt-4 px-6 py-3 bg-[#06402B] text-white font-bold rounded-lg inline-block"
-              >
-                Back to Menu
-              </a>
-            </div>
+        <div className="flex items-center justify-center min-h-[70vh] px-4">
+          <div className="max-w-md text-center">
+            <h2 className="text-2xl font-medium text-gray-900 mb-4">Item Not Found</h2>
+            <p className="text-gray-600 mb-8">
+              We couldn't find the menu item you're looking for.
+            </p>
+            <a
+              href="/menu"
+              className="inline-block px-6 py-3 bg-[#06402B] text-white rounded-lg hover:bg-[#053222] transition-colors"
+            >
+              View Menu
+            </a>
           </div>
         </div>
       </div>
@@ -40,44 +35,57 @@ function MenuItem() {
   }
 
   return (
-    <div className="mx-auto">
+    <div className="font-cute min-h-screen">
       <Navbar />
-      <div className="max-w-7xl mt-7 mx-auto flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
-
-        <div className="lg:w-1/2">
-          <img
-            src={item.image}
-            alt={item.name}
-            className="w-full max-w-[600px] h-auto max-h-[500px] object-cover mx-auto rounded-xl"
-          />
-        </div>
-
-        <div className="text-black font-cute lg:w-1/2">
+      
+      <main className="max-w-6xl mx-auto px-4 py-12 sm:px-6">
         {state?.reason && (
-          <div className="bg-[#06402B] text-white mt-10 p-3 rounded-xl w-full mb-5">
-            {state.reason}
+          <div className="bg-[#06402B] text-white p-4 rounded-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-sm">{state.reason}</p>
           </div>
         )}
-          <h2 className="text-3xl mt-5 font-bold mb-6">{item.name}</h2>
-          <p className="mb-6 max-w-sm lg:max-w-xl mx-auto lg:mx-0">{item.description}</p>
-          <div className="mb-6 max-w-xl mx-auto lg:mx-0">
-            <h3 className="text-xl font-semibold mb-3">Ingredients</h3>
-            <ul className="list-disc list-inside">
-              {item.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-            </ul>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full aspect-square object-cover rounded-lg"
+            />
           </div>
-          <a
-            href="/order"
-            className="mt-4 px-6 py-3 bg-[#06402B] text-white font-bold rounded-lg inline-block"
-          >
-            Order Now
-          </a>
+
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-3xl font-medium text-gray-900 mb-4">{item.name}</h1>
+              <p className="text-gray-600 leading-relaxed">{item.description}</p>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-medium text-gray-900 mb-4">Ingredients</h2>
+              <ul className="space-y-2">
+                {item.ingredients.map((ingredient, index) => (
+                  <li key={index} className="text-gray-600">
+                    • {ingredient}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="pt-4 flex gap-4">
+              <button className="flex items-center justify-center px-6 py-3 bg-[#06402B] text-white rounded-lg hover:bg-[#053222] transition-colors w-full sm:w-auto">
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                Order Now
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-      <Testimonials11 />
-      <FAQ />
+
+        <div className="mt-24">
+          <Testimonials11 />
+          <FAQ />
+        </div>
+      </main>
+      
       <Footer />
     </div>
   );
