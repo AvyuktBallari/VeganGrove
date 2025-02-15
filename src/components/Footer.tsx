@@ -21,9 +21,9 @@ const Footer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 items-start mt-10 md:mt-0">
               <div className="flex flex-col space-y-4">
                 <h5 className="text-sm font-semibold text-gray-300">Quick Links</h5>
-                <a className="text-xs sm:text-sm text-gray-400 hover:text-gray-500 transition-colors" href="#">LinkedIn</a>
+                <a className="text-xs sm:text-sm text-gray-400 hover:text-gray-500 transition-colors" href="/">Home</a>
                 <a className="text-xs sm:text-sm text-gray-400 hover:text-gray-500 transition-colors" href="/about">About Us</a>
-                <a className="text-xs sm:text-sm text-gray-400 hover:text-gray-500 transition-colors" href="/contact">Contact</a>
+                <a className="text-xs sm:text-sm text-gray-400 hover:text-gray-500 transition-colors" href="/menu">Menu</a>
               </div>
   
               <div className="flex flex-col space-y-4">

@@ -107,12 +107,12 @@ function Menu() {
         <h1 className="lg:text-7xl text-3xl font-bold leading-tight">
           EXPERIENCE RECIPES OF REAL TASTE
         </h1>
-        <p className="mt-5 text-lg max-w-sm lg:max-w-xl mx-auto">
+        <p className="mt-5 mb-8 text-lg max-w-sm lg:max-w-xl mx-auto">
           But our menu doesn't stop at breakfast and lunch. We also offer intuitive menu options for Brunches and Fine Dining.
         </p>
-        <button className="mt-4 px-6 py-2 border border-black text-black hover:bg-black hover:text-white transition">
+        <a href="/order" className="mt-4 px-6 py-2 border border-black text-black hover:bg-black hover:text-white transition">
           ORDER NOW
-        </button>
+        </a>
       </div>
 
       <div className="max-w-6xl mx-auto mt-20 px-4">
