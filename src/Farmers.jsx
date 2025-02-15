@@ -76,14 +76,14 @@ const Farmers = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-lg overflow-hidden">
-            <img alt="Farm Fresh" src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww" className="w-full h-84" />
+          <div className="rounded-lg overflow-hidden h-64 md:h-[400px]">
+            <img alt="Farm Fresh" src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww" className="w-full h-full object-cover" />
           </div>
         </div>
 
         <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
-          <div className="rounded-lg overflow-hidden">
-            <img alt="Artisanal Kitchen" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" className="w-full h-84" />
+          <div className="rounded-lg overflow-hidden h-64 md:h-[400px]">
+            <img alt="Artisanal Kitchen" src="https://img.freepik.com/free-photo/closeup-view-calm-young-lady-street_74855-4995.jpg" className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col gap-y-3 font-fig justify-center text-white">
             <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
@@ -160,8 +160,8 @@ const Farmers = () => {
               </div>
             </div>
           </div>
-          <div className="rounded-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1524666041070-9d87656c25bb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Delivery Network" className="w-full h-84" />
+          <div className="rounded-lg overflow-hidden h-64 md:h-[400px]">
+            <img src="https://images.unsplash.com/photo-1524666041070-9d87656c25bb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Delivery Network" className="w-full h-full object-cover" />
           </div>
         </div>
         </div>
