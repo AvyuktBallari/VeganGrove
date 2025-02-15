@@ -72,10 +72,10 @@ function MenuItem() {
             </div>
 
             <div className="pt-4 flex gap-4">
-              <button className="flex items-center justify-center px-6 py-3 bg-[#06402B] text-white rounded-lg hover:bg-[#053222] transition-colors w-full sm:w-auto">
+              <a href="/order" className="flex items-center justify-center px-6 py-3 bg-[#06402B] text-white rounded-lg hover:bg-[#053222] transition-colors w-full sm:w-auto">
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Order Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
