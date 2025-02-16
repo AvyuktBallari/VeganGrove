@@ -8,7 +8,7 @@ body {
 
 @font-face {
   font-family: "Satoshi-Bold";
-  src: url("src/assets/Satoshi-Bold.otf") format("opentype");
+  src: url("./assets/Satoshi-Bold.otf") format("opentype");
 }
 
 .font-cute {
