@@ -43,7 +43,7 @@ function ReferencePage() {
 
         <div className="mx-auto flex justify-center space-x-4 mb-8">
         <a className="px-4 py-2 rounded-md bg-black text-white border border-gray-300" download="worklog.pdf" href={worklog}>Worklog</a>
-        <a className="px-4 py-2 rounded-md bg-black text-white border border-gray-300" download="copyright.pdf" href={copyright}>Copyright</a>
+        <a className="px-4 py-2 rounded-md bg-black text-white border border-gray-300" download="copyright.pdf" href={copyright}>Student Copyright Checklist</a>
         </div>
 
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
