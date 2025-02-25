@@ -90,30 +90,31 @@ export default function Navbar() {
               className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 placeholder-gray-500 text-gray-700 text-sm md:text-base"
             />
             {loading && (
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                <svg
-                  className="animate-spin w-5 h-5 text-[#06402B]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0"
-                  ></path>
-                </svg>
-              </div>
-            )}
+  <div className="absolute inset-y-0 right-0 flex items-center pr-4">
+    <svg
+      className="animate-spin w-5 h-5 text-[#06402B]"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      ></circle>
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0"
+      ></path>
+    </svg>
+  </div>
+)}
+
           </div>
         </div>
 

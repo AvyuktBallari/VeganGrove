@@ -9,156 +9,88 @@ function About() {
       <Navbar />
       <div className="text-center mx-auto mt-20 items-center">
         <h1 className="lg:text-8xl text-4xl text-center max-w-4xl mx-auto font-[500] leading-tighter">
-          The Process
+          Sustainable Practices
         </h1>
-
         <p className="mt-5 mb-5 max-w-sm mx-auto text-lg">
-          From farm to table - discover our <strong><em>commitment</em></strong> to quality.
-          Every step carefully crafted for your dining experience.
+          From soil to plate - exploring the <strong><em>science</em></strong> behind ethical food production.
         </p>
       </div>
 
       <div className="max-w-[78rem] mx-auto">
-        <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
+        <div className="p-6 items-center sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
           <div className="flex flex-col gap-y-3 font-fig justify-center text-black">
             <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
-                <span className="font-bold text-xl">Step 1</span>
+              <span className="font-bold text-xl">Step 1</span>
             </div>
             <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
-              Farm-Fresh Ingredients
-              <span className="block opacity-70">Sourced from Local Partners</span>
+              Farm-to-Table Science
+              <span className="block opacity-70">Maximizing Nutrient Retention</span>
             </h1>
             <p className="text-lg tracking-wide w-full text-left text-black">
-              We partner with local farms that practice sustainable agriculture, ensuring only the freshest seasonal produce and ethically-raised meats reach our kitchen.
+              Our farm-to-table system ensures that produce is harvested at peak ripeness, minimizing nutrient degradation through optimized post-harvest handling. Studies show that fresh-picked organic produce retains up to 30% more antioxidants compared to conventionally stored alternatives.
             </p>
             <div className="flex flex-col gap-y-2 tracking-wide text-black">
-              <div className="flex items-center gap-x-8">
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">100% Organic Practices</p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Daily Harvest</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-8">
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Seasonal Selection</p>
-                </div>
-              </div>
+              <p className="text-lg">✓ Soil microbiome preservation</p>
+              <p className="text-lg">✓ Non-GMO, heirloom varieties</p>
+              <p className="text-lg">✓ Closed-loop composting systems</p>
             </div>
           </div>
-          <div className="rounded-lg overflow-hidden">
-            <img alt="Farm Fresh" src="https://www.2harvest.org/sites/default/files/styles/scale_1000px/public/2022-10/moses-1.jpg?itok=cOZ7URj5" className="w-full h-auto" />
+          <div className="rounded-lg overflow-hidden items-center justify-center">
+            <img alt="Farm Science" src="https://plus.unsplash.com/premium_photo-1664299231810-29d1caf6f753?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFybSUyMHRvJTIwdGFibGV8ZW58MHx8MHx8fDA%3D" className="w-full h-auto" />
           </div>
         </div>
 
-        <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
+        <div className="p-6 items-center sm:p-8 md:p-9 bg-[#e2e8f0] text-black rounded-lg gap-8 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
           <div className="rounded-lg overflow-hidden">
-            <img alt="Artisanal Kitchen" src="https://rotom.co.uk/media/mageplaza/blog/post/import/blog/uk/2020/08/take-care-of-your-crops-learn-about-containers-carts-and-other-farming-solutions/take-care-of-your-crops-learn-about-containers-carts-and-other-farming-solutions-2.jpg" className="w-full h-auto" />
+            <img alt="Vegan Nutrition" src="https://lifestylemedicine.org/wp-content/uploads/2023/03/shutterstock_408989071-scaled.jpg-1024x683.webp" className="w-full h-auto" />
           </div>
-          <div className="flex flex-col gap-y-3 font-fig justify-center text-white">
-            <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
-                <span className="font-bold text-xl">Step 2</span>
-            </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
-              Artisanal Preparation
-              <span className="block opacity-70">Crafted with Care</span>
-            </h1>
-            <p className="text-lg tracking-wide w-full text-left text-black">
-              Our master chefs combine traditional techniques with modern innovation. Every dish is prepared fresh daily, never frozen, with no artificial additives.
-            </p>
-            <div className="flex flex-col gap-y-2 tracking-wide text-black">
-              <div className="flex items-center gap-x-8">
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Handcrafted Techniques</p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">0% Preservatives</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-8">
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Allergy-Friendly Options</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="p-6 sm:p-8 md:p-10 bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
           <div className="flex flex-col gap-y-3 font-fig justify-center text-black">
-            <div className="p-2 rounded-md bg-[#06402B] text-white w-max">
-                <span className="font-bold text-xl">Step 3</span>
+            <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
+              <span className="font-bold text-xl">Step 2</span>
             </div>
             <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
-              Efficient Distribution
-              <span className="block opacity-70">Maintaining Peak Freshness</span>
+              Organic Vegan Nutrition
+              <span className="block opacity-70">Backed Benefits</span>
             </h1>
             <p className="text-lg tracking-wide w-full text-left text-black">
-              Our temperature-controlled logistics network ensures ingredients and prepared dishes maintain optimal freshness from our kitchen to your table.
+              Plant-based diets are scientifically proven to reduce inflammation, support cardiovascular health, and promote longevity. Our organic menu is rich in essential nutrients, including B12-fortified foods and omega-3s from algae sources.
             </p>
             <div className="flex flex-col gap-y-2 tracking-wide text-black">
-              <div className="flex items-center gap-x-8">
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Refrigerated Transport</p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Local Partnerships</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-x-8">
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Daily Deliveries</p>
-                </div>
-                <div className="flex items-center gap-x-2">
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" className="w-4 h-4">
-                    <path d="M237.66,85.26l-128.4,128.4a8,8,0,0,1-11.32,0l-71.6-72a8,8,0,0,1,0-11.31l24-24a8,8,0,0,1,11.32,0l36.68,35.32a8,8,0,0,0,11.32,0l92.68-91.32a8,8,0,0,1,11.32,0l24,23.6A8,8,0,0,1,237.66,85.26Z"/>
-                  </svg>
-                  <p className="text-lg">Eco Packaging</p>
-                </div>
-              </div>
+              <p className="text-lg">✓ High bioavailability of vitamins</p>
+              <p className="text-lg">✓ Sustainable plant proteins</p>
+              <p className="text-lg">✓ Zero artificial additives</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-6 sm:p-8 md:p-10 items-center bg-[#e2e8f0] text-black rounded-lg gap-5 grid grid-cols-1 md:grid-cols-2 shadow-md mt-10 mx-4 sm:mx-6 md:mx-8">
+          <div className="flex flex-col gap-y-3 font-fig justify-center text-black">
+            <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
+              <span className="font-bold text-xl">Step 3</span>
+            </div>
+            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
+              Sustainable Packaging
+              <span className="block opacity-70">Minimizing Environmental Impact</span>
+            </h1>
+            <p className="text-lg tracking-wide w-full text-left text-black">
+              Our commitment to sustainability extends beyond food. We use biodegradable packaging and eco-friendly logistics to reduce carbon footprint and waste pollution.
+            </p>
+            <div className="flex flex-col gap-y-2 tracking-wide text-black">
+              <p className="text-lg">✓ 100% Compostable Materials</p>
+              <p className="text-lg">✓ Zero-Waste Initiatives</p>
+              <p className="text-lg">✓ Reduced Carbon Footprint</p>
             </div>
           </div>
           <div className="rounded-lg overflow-hidden">
-            <img src="https://cdn.sanity.io/images/ec9j7ju7/production/84f30a7e86a8167b1a23f874b44134fb2883c239-1705x1137.jpg?w=3840&q=75&fit=clip&auto=format" alt="Delivery Network" className="w-full h-auto" />
+            <img alt="Sustainable Packaging" src="https://static.vecteezy.com/system/resources/thumbnails/039/001/619/small_2x/an-arrangement-of-beige-eco-friendly-packaging-and-utensils-on-a-wooden-table-video.jpg" className="w-full h-auto" />
           </div>
         </div>
-        </div>
-
-        <Testimonials11 />
-        <FAQ />
-        <Footer />
-        </div>
-        
-    );
+      </div>
+      <Testimonials11 />
+      <FAQ />
+      <Footer />
+    </div>
+  );
 }
 
 export default About;
-

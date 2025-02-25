@@ -45,7 +45,7 @@ function MenuItem() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-16">
           <div>
             <img
               src={item.image}
@@ -80,11 +80,13 @@ function MenuItem() {
           </div>
         </div>
 
-        <div className="mt-24">
+
+      </main>
+
+      <div className="mt-24">
           <Testimonials11 />
           <FAQ />
-        </div>
-      </main>
+      </div>
       
       <Footer />
     </div>
