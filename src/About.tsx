@@ -22,7 +22,7 @@ function About() {
             <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
               <span className="font-bold text-xl">Step 1</span>
             </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
+            <h1 className="text-3xl font-cute lg:text-5xl text-left text-black font-semibold">
               Farm-to-Table Science
               <span className="block opacity-70">Maximizing Nutrient Retention</span>
             </h1>
@@ -48,7 +48,7 @@ function About() {
             <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
               <span className="font-bold text-xl">Step 2</span>
             </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
+            <h1 className="text-3xl font-cute lg:text-5xl text-left text-black font-semibold">
               Organic Vegan Nutrition
               <span className="block opacity-70">Backed Benefits</span>
             </h1>
@@ -68,7 +68,7 @@ function About() {
             <div className="p-2 rounded-md bg-[#06402B] text-[white] w-max">
               <span className="font-bold text-xl">Step 3</span>
             </div>
-            <h1 className="text-3xl lg:text-5xl text-left text-black font-semibold">
+            <h1 className="text-3xl font-cute lg:text-5xl text-left text-black font-semibold">
               Sustainable Packaging
               <span className="block opacity-70">Minimizing Environmental Impact</span>
             </h1>
